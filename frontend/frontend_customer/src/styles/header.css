@@ -1,0 +1,176 @@
+/* Header Styles */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+}
+.hero{
+  background-color: #003e29 !important;
+}
+
+.header .container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header-content {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem 1rem 0 !important;
+  min-height: 140px; /* Set minimum height for header */
+}
+
+.logo {
+  margin-left: 2rem; /* Shift logo to the right */
+}
+
+.logo-image {
+  height: 150px; /* Increased height to match header */
+  width: 350px; /* Increased width proportionally */
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: contain; /* Ensures proper scaling */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+.cart-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.cart-button svg {
+  height: 24px;
+  width: 24px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #003e29;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 9999px;
+}
+
+/* Remove gaps between header and other sections */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure no gaps with hero section */
+.header + * {
+  margin-top: 0;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 0.75rem 2rem 0.75rem 0 !important;
+    min-height: 100px; /* Reduced height for tablet */
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    margin-left: 1.5rem; /* Reduced margin for tablet */
+  }
+  
+  .logo-image {
+    object-fit: contain;
+    height: 90px; /* Increased from 80px */
+    width: 250px; /* Increased from 220px */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .header-content {
+    padding: 0.5rem 1rem 0.5rem 0 !important;
+    min-height: 80px; /* Set height for mobile */
+  }
+  
+  .logo {
+    margin-left: 1rem; /* Reduced margin for mobile */
+  }
+  
+  .logo-image {
+    object-fit: contain;
+    height: 70px; /* Increased from 65px */
+    width: 220px; /* Increased from 200px */
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0.5rem 0.5rem 0.5rem 0 !important;
+    min-height: 70px; /* Set height for small mobile */
+  }
+  
+  .logo {
+    margin-left: 0.5rem; /* Small margin for small mobile */
+  }
+  
+  .logo-image {
+    object-fit: contain;
+    height: 60px; /* Increased from 55px */
+    width: 190px; /* Increased from 180px */
+  }
+  
+  .cart-button {
+    padding: 0.25rem;
+  }
+  
+  .cart-button svg {
+    height: 20px;
+    width: 20px;
+  }
+}
