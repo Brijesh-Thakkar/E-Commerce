@@ -50,7 +50,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/qr', qrRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/addCustomer',addCustomerByseller);
-app.use('api/sendmessage',sendMessage);
+app.use('/api/sendmessage',sendMessage);
 
 
 
